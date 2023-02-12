@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181c47;
+    font-family: 'Ibarra Real Nova', serif;
+    margin: 0;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0,0, 0.2);
+    width: 300px;
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #181c47;
+    padding: 0.25rem;
+}
+
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: rgb(119, 11, 11);
+}
+
+header {
+    background-color: #22254b;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid #22254b;
+    border-radius: 50px;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+    
+}
